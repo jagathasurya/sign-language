@@ -1,1 +1,44 @@
+Speech to Sign: 
+Speech to sign translation is a process  which helps to convert speech in to the sign language. Its  The live speech is received as input from the microphone of our system. Everything works on the client side, using HTML, CSS, and JavaScript. The organization guarantees a user-friendly web-based experience that is both responsive and accessible. This module translates written or typed input directly to ISL gestures.
+User Input(voice activation):
+	First user click on the “voice icon”.
+	This actives the web speech API(Speech recognition in JavaScript).
+JavaScript:
+const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+Listening & Speech Recognition:
+	The live speech is received as input from the microphone of our system.
+	It uses the language setting (en-IN for Indian English) to better capture the audio.
+JavaScript:
+recognition.lang = 'en-IN';
+recognition.start();
+	The browser which helps to convert the voice input to the text using the built-in speech recognition engines(like google Speech).
+	It is returned as a transcript from the result.
+JavaScript:
+recognition.onresult = event => {
+  const transcript = event.results[0][0].transcript;
+};
+Text Preprocessing:
+	The main goal of the text reprocessing is to clean and structure the input text for mapping.
+	The text undergoes  preprocessing to ensure consistency:
+	Lowercasing: its converts all words to lowercase.
+	Punctuation Removal: It helps to remove the punctuation marks like commas, question marks, periods etc.
+	Tokenization: It breaks the sentence into individual words using whitespace.
+Example:
+Input :”Hello Railway Station!”
+After the preprocessing:[“hello” , “railway”, “station”]
+
+Translation Mapping:
+	The translation process that involves the checks through each word and mapping it to the sign. Create a mapping between words or phrases in the spoken language and their corresponding signs in sign language.
+	The system checks each word against a predefined dictionary.
+	Keys= English words
+	Values= file name of the sign representations(for example .mp4 videos and .png for image).
+	This mapping can be manually curated or learned from a dataset.
+Sign Language Representation: 
+	Represent signs using a suitable notation (e.g., SignWriting, Pose Sequence, etc.).
+	For video files(like .mp4):<video> element is created.
+	For image fies(like .png):< image> element is created.
+	Each sign corresponds to a specific hand gesture or movement.
+Output Display(Text-to-Sign Conversion):
+	The all generated elements (videos or images) are added to the sign output.
+	Combine the elements to form a complete sign sequence.
 
