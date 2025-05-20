@@ -1,3 +1,6 @@
+OUTPUT OF THE SPEECH & TEXT TO SIGN 
+
+
 ![Screenshot 2025-05-04 152710](https://github.com/user-attachments/assets/11343d98-79e5-4b82-add3-86dbc9c08b33)
 ![Screenshot 2025-05-04 152855](https://github.com/user-attachments/assets/1af9e8c9-71ef-4ec3-9f8f-7f1b4e6600c0)
 ![Screenshot 2025-05-04 152935](https://github.com/user-attachments/assets/e43661af-994c-4dc3-b984-90c1fbfd4bb3)
